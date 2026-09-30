@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your Toy Haven order with a simple, secure checkout.">
+    <meta name="theme-color" content="#18285c">
+    <title>Checkout | Toy Haven</title>
+    <link rel="icon" href="IMAGES/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container nav-container">
+
+<a href="index.html"
+class="logo-link">
+
+<img src="IMAGES/Logo.jpeg" alt="Toy Haven Logo">
+
+<span>Toy Haven</span>
+
+</a>
+
+<button class="menu-button"
+id="menuButton" aria-label="Open navigation">
+☰
+</button>
+
+<nav class="navigation"
+id="navigation">
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+
+<a href="cart.html">
+Cart
+<span class="cart-badge">0</span>
+</a>
+
+<a href="wishlist.html">
+Collection
+</a>
+
+<a href="checkout.html"
+class="active">
+Checkout
+</a>
+
+<a href="support.html">
+Support
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<section class="page-banner">
+
+<div class="container">
+
+<span class="eyebrow">
+🔒 SECURE DEMO CHECKOUT
+</span>
+
+<h1>
+Complete Your Order
+</h1>
+
+<p>
+This is a front-end checkout simulation.
+No real payment is processed.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container checkout-layout">
+
+<div class="form-panel"
+id="checkoutPanel">
+
+<h2>Delivery Details</h2>
+
+<p class="muted">
+Please complete all required fields.
+</p>
+
+
+<form id="checkoutForm"
+novalidate>
+
+
+<div class="form-grid">
+
+<div class="form-field">
+
+<label for="fullName">
+Full Name
+</label>
+
+<input
+type="text"
+id="fullName"
+name="fullName"
+placeholder="Enter your full name"
+required>
+
+<small class="form-error"
+id="nameError"></small>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="email">
+Email Address
+</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="you@example.com"
+required>
+
+<small class="form-error"
+id="emailError"></small>
+
+</div>
+
+
+<div class="form-field full">
+
+<label for="address">
+Delivery Address
+</label>
+
+<textarea
+id="address"
+name="address"
+rows="5"
+placeholder="House number, street, city"
+required></textarea>
+
+<small class="form-error"
+id="addressError"></small>
+
+</div>
+
+
+<div class="form-field full">
+
+<span class="field-title">
+Payment Method
+</span>
+
+
+<div class="payment-options">
+
+<label class="payment-option">
+
+<input
+type="radio"
+name="payment"
+value="Card"
+checked>
+
+<span>
+💳 Card
+<br>
+<small>
+Simulation
+</small>
+</span>
+
+</label>
+
+
+<label class="payment-option">
+
+<input
+type="radio"
+name="payment"
+value="Cash on Delivery">
+
+<span>
+💵 Cash on Delivery
+<br>
+<small>
+Simulation
+</small>
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="information-box">
+
+✨ Your order will be saved to
+localStorage for this assignment demonstration.
+
+</div>
+
+
+<button
+type="submit"
+class="button button-primary full-button">
+
+Confirm Order →
+
+</button>
+
+</form>
+
+</div>
+
+
+<div class="success-panel"
+id="successPanel">
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>
+Order Confirmed!
+</h2>
+
+<p>
+Thank you for choosing Toy Haven.
+Your demonstration order has been
+successfully stored.
+</p>
+
+<a href="products.html" class="button button-primary">Continue Shopping</a>
+
+</div>
+
+
+<aside class="summary-panel">
+
+<h2>
+Order Summary
+</h2>
+
+<div id="checkoutItems"></div>
+
+<hr>
+
+<div class="summary-total">
+
+<span>Total</span>
+
+<strong id="checkoutTotal">
+LKR 0.00
+</strong>
+
+</div>
+
+<p class="summary-note">
+
+Delivery:
+LKR 500 under LKR 15,000.
+Free above LKR 15,000.
+
+</p>
+
+</aside>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+
+<a href="index.html" class="logo-link footer-logo">
+
+<img src="IMAGES/Logo.jpeg" alt="Toy Haven Logo">
+
+<span>Toy Haven</span>
+
+</a>
+
+<p>
+Collectible joy for every shelf,
+game night and gift bag.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Explore</h3>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="wishlist.html">Collection</a>
+<a href="cart.html">Cart</a>
+
+</div>
+
+
+<div>
+
+<h3>Payment</h3>
+
+<p>Card simulation</p>
+<p>Cash on Delivery</p>
+
+</div>
+
+
+<div>
+
+<h3>Support</h3>
+
+<a href="support.html">
+FAQ & Feedback
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div class="container">
+
+© 2025 Toy Haven • Demo checkout
+
+</div>
+
+</div>
+
+</footer>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script src="data/products.js"></script>
+<script src="app.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cart =
+        ToyHaven.getCart();
+
+    const summary =
+        document.getElementById("checkoutItems");
+
+
+    if (cart.length === 0) {
+
+        summary.innerHTML = `
+
+            <div class="empty-state">
+
+                <h3>
+                    Your cart is empty.
+                </h3>
+
+                <a href="products.html"
+                    class="text-link">
+                    Browse Products →
+                </a>
+
+            </div>
+
+        `;
+
+        document.querySelector("#checkoutForm button")
+            .disabled = true;
+
+        return;
+
+    }
+
+
+    let subtotal = 0;
+
+
+    summary.innerHTML =
+        cart.map(function (item) {
+
+            const product =
+                ToyHaven.getProduct(item.id);
+
+            if (!product) return "";
+
+            const itemTotal =
+                product.price *
+                item.quantity;
+
+            subtotal += itemTotal;
+
+            return `
+
+                <div class="summary-row">
+
+                    <span>
+                        ${product.name}
+                        × ${item.quantity}
+                    </span>
+
+                    <strong>
+                        ${ToyHaven.formatMoney(itemTotal)}
+                    </strong>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    const delivery =
+        subtotal >= 15000 ? 0 : 500;
+
+    const total =
+        subtotal + delivery;
+
+
+    document.getElementById("checkoutTotal")
+        .textContent =
+        ToyHaven.formatMoney(total);
+
+
+    document.getElementById("checkoutForm")
+        .addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            document.getElementById("nameError")
+                .textContent = "";
+
+            document.getElementById("emailError")
+                .textContent = "";
+
+            document.getElementById("addressError")
+                .textContent = "";
+
+
+            const name =
+                document.getElementById("fullName")
+                .value.trim();
+
+            const email =
+                document.getElementById("email")
+                .value.trim();
+
+            const address =
+                document.getElementById("address")
+                .value.trim();
+
+
+            let valid = true;
+
+
+            if (name.length < 2) {
+
+                document.getElementById("nameError")
+                    .textContent =
+                    "Please enter your full name.";
+
+                valid = false;
+
+            }
+
+
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+
+                document.getElementById("emailError")
+                    .textContent =
+                    "Please enter a valid email.";
+
+                valid = false;
+
+            }
+
+
+            if (address.length < 8) {
+
+                document.getElementById("addressError")
+                    .textContent =
+                    "Please enter your delivery address.";
+
+                valid = false;
+
+            }
+
+
+            if (!valid) return;
+
+
+            const payment =
+                document.querySelector(
+                    'input[name="payment"]:checked'
+                ).value;
+
+
+            const order = {
+
+                orderNumber:
+                    "TH-" + Date.now(),
+
+                customer: {
+                    name: name,
+                    email: email,
+                    address: address
+                },
+
+                payment: payment,
+
+                items: cart,
+
+                total: total,
+
+                createdAt:
+                    new Date().toISOString()
+
+            };
+
+
+            const orders =
+                ToyHaven.read(
+                    ToyHaven.KEYS.orders,
+                    []
+                );
+
+
+            orders.unshift(order);
+
+
+            ToyHaven.write(
+                ToyHaven.KEYS.orders,
+                orders
+            );
+
+
+            localStorage.removeItem(
+                ToyHaven.KEYS.cart
+            );
+
+
+            document.getElementById(
+                "checkoutPanel"
+            ).style.display = "none";
+
+
+            document.getElementById(
+                "successPanel"
+            ).classList.add("show");
+
+
+            ToyHaven.updateCartBadge();
+
+
+            ToyHaven.showToast(
+                "Order confirmed successfully!"
+            );
+
+        });
+
+});
+
+</script>
+
+</body>
+</html>

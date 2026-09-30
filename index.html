@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toy Haven - discover collectible figurines, toys, board games and diecast cars.">
+    <meta name="theme-color" content="#18285c">
+    <title>Toy Haven | Collect Joy</title>
+    <link rel="icon" href="IMAGES/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo-link">
+                <img src="IMAGES/Logo.jpeg" alt="Toy Haven Logo">
+                <span>Toy Haven</span>
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="navigation" id="navigation">
+
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+
+                <a href="cart.html">Cart<span class="cart-badge">0</span></a>
+                <a href="wishlist.html">Collection</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="support.html">Support</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="promotion-bar">
+
+        <div class="promotion-track">
+
+            <span>🚀 New toys arriving every week</span>
+            <span>🎁 Free delivery over LKR 15,000</span>
+            <span>⭐ Collector favourites from LKR 2,950</span>
+            <span>💜 Build your dream collection</span>
+            <span>🎲 Fun for the whole family</span>
+
+            <span>🚀 New toys arriving every week</span>
+            <span>🎁 Free delivery over LKR 15,000</span>
+            <span>⭐ Collector favourites from LKR 2,950</span>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">✨ Welcome to Toy Haven</span>
+
+                    <h1>Collect the fun.<span>Share the magic.</span></h1>
+
+                    <p>
+                        Discover colourful toys, collectible figurines,
+                        exciting board games and detailed diecast cars —
+                        all in one playful place.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="products.html" class="button button-primary">Shop Now →</a>
+                        <a href="#categories" class="button button-secondary">Explore Categories</a>
+
+                    </div>
+
+                    <div class="hero-features">
+
+                        <div>
+                            <strong>500+</strong>
+                            <span>Happy collectors</span>
+                        </div>
+
+                        <div>
+                            <strong>4</strong>
+                            <span>Product categories</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Front-end experience</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-circle"></div>
+
+                    <div class="hero-toy">
+                        <img src="IMAGES/toy-teddy.png" alt="Toy Haven collectible teddy bear">
+                    </div>
+
+                    <div class="floating-card floating-card-one">⭐ 4.9 Collector Rating</div>
+
+                    <div class="floating-card floating-card-two">🎁 Gift-ready toys</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="categories">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="small-title">EXPLORE</span>
+
+                        <h2>Shop by Category</h2>
+
+                        <p>
+                            Find something special for every kind of toy lover.
+                        </p>
+                    </div>
+
+                    <a href="products.html" class="text-link">View All →</a>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <a href="products.html?category=Figurines"
+                        class="category-card category-purple">
+
+                        <span class="category-icon">🧸</span>
+
+                        <h3>Figurines</h3>
+
+                        <p>
+                            Display-worthy little friends
+                        </p>
+
+                    </a>
+
+
+                    <a href="products.html?category=Toys"
+                        class="category-card category-blue">
+
+                        <span class="category-icon">🚀</span>
+
+                        <h3>Toys</h3>
+
+                        <p>
+                            Play, build and imagine
+                        </p>
+
+                    </a>
+
+
+                    <a href="products.html?category=Board Games"
+                        class="category-card category-orange">
+
+                        <span class="category-icon">🎲</span>
+
+                        <h3>Board Games</h3>
+
+                        <p>
+                            Game night starts here
+                        </p>
+
+                    </a>
+
+
+                    <a href="products.html?category=Diecast Cars" class="category-card category-green">
+                    
+                        <span class="category-icon">🏎️</span>
+
+                        <h3>Diecast Cars</h3>
+
+                        <p>
+                            Mini machines, big detail
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section light-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="small-title">TODAY'S SPECIAL</span>
+
+                        <h2>Product of the Day</h2>
+
+                        <p>
+                            A daily spotlight chosen automatically.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="daily-product">
+
+                    <div class="daily-image">
+
+                        <img id="dailyProductImage"
+                            src="IMAGES/toy-teddy.png"
+                            alt="Product of the day">
+
+                    </div>
+
+
+                    <div class="daily-content">
+
+                        <span class="product-badge" id="dailyBadge">Bestseller</span>
+
+                        <span class="category-text" id="dailyCategory">Figurines</span>
+
+                        <h2 id="dailyName">Moonlight Teddy Bear</h2>
+
+                        <p id="dailyDescription">A dreamy collector teddy with a soft 
+                            celestial finish and a tiny red bow.
+                        </p>
+
+                        <div class="large-price" id="dailyPrice">
+                            LKR 4,250.00
+                        </div>
+
+                        <div class="hero-buttons">
+
+                            <button class="button button-primary" id="dailyAddButton">Add to Cart</button>
+
+                            <a href="products.html" class="button button-outline">View Products</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="small-title">CUSTOMER FAVOURITES</span>
+
+                        <h2>Featured Products</h2>
+
+                        <p>
+                            Some of the products collectors love most.
+                        </p>
+                    </div>
+
+                    <a href="products.html" class="text-link">Shop All →</a>
+
+                </div>
+
+                    <div class="product-grid" id="featuredProducts"></div>
+
+            </div>
+
+        </section>
+
+        <section class="section light-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="small-title">DON'T MISS OUT</span>
+
+                        <h2>Special Offers</h2>
+
+                        <p>
+                            More reasons to add a little joy to your day.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="offers-grid">
+
+                    <article class="offer-card offer-pink">
+
+                        <span>🎀 WEEKEND SPECIAL</span>
+
+                        <h3>
+                            10% OFF Selected Collector Picks
+                        </h3>
+
+                        <p>
+                            Look for our special "Hot" products
+                            across the Toy Haven collection.
+                        </p>
+
+                        <a href="products.html" class="button button-light">Shop Offers</a>
+
+                    </article>
+
+
+                    <article class="offer-card offer-blue">
+
+                        <span>🚚 FREE DELIVERY</span>
+
+                        <h3>
+                            Free Delivery Over LKR 15,000
+                        </h3>
+
+                        <p>
+                            Build a bigger collection and enjoy
+                            free simulated delivery.
+                        </p>
+
+                        <a href="products.html" class="button button-light">Build Your Box</a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="newsletter-section">
+
+            <div class="container newsletter-box">
+
+                <div>
+
+                    <span class="small-title">TOY HAVEN CLUB</span>
+
+                    <h2>Be first to discover new toys.</h2>
+
+                    <p>
+                        Join our newsletter for new arrivals,
+                        offers and collector news.
+                    </p>
+
+                </div>
+
+
+                <form class="newsletter-form">
+
+                    <input type="email" name="email" placeholder="Enter your email address" aria-label="Email address" required>
+                    
+                    <button type="submit">Join Club</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="index.html" class="logo-link footer-logo">
+
+                    <img src="IMAGES/Logo.jpeg" alt="Toy Haven Logo">
+
+                    <span>Toy Haven</span>
+
+                </a>
+
+                <p>
+                    Collectible joy for every shelf,
+                    game night and gift bag.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="wishlist.html">My Collection</a>
+                <a href="cart.html">Shopping Cart</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Categories</h3>
+
+                <a href="products.html?category=Figurines">Figurines</a>
+
+                <a href="products.html?category=Toys">Toys</a>
+
+                <a href="products.html?category=Board Games">Board Games</a>
+
+                <a href="products.html?category=Diecast Cars">Diecast Cars</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Need Help?</h3>
+
+                <a href="support.html">Support & FAQ</a>
+
+                <a href="checkout.html">Checkout</a>
+
+                <p>
+                    Email:
+                    hello@toyhaven.lk
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <span>
+                    © 2025 Toy Haven. Academic front-end project.
+                </span>
+
+                <span>
+                    HTML • CSS • JavaScript
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="data/products.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const product = ToyHaven.getProductOfTheDay();
+
+            if (product) {
+
+                document.getElementById("dailyProductImage").src =
+                    product.image;
+
+                document.getElementById("dailyProductImage").alt =
+                    product.name;
+
+                document.getElementById("dailyName").textContent =
+                    product.name;
+
+                document.getElementById("dailyCategory").textContent =
+                    product.category;
+
+                document.getElementById("dailyDescription").textContent =
+                    product.description;
+
+                document.getElementById("dailyPrice").textContent =
+                    ToyHaven.formatMoney(product.price);
+
+                document.getElementById("dailyBadge").textContent =
+                    product.badge;
+
+                document.getElementById("dailyAddButton").onclick =
+                    function () {
+                        ToyHaven.addToCart(product.id);
+                    };
+
+            }
+
+            ToyHaven.renderProducts(
+                "#featuredProducts",
+                {
+                    limit: 4
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>

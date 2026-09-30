@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review the items in your Toy Haven shopping cart.">
+    <meta name="theme-color" content="#18285c">
+    <title>Shopping Cart | Toy Haven</title>
+    <link rel="icon" href="IMAGES/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="IMAGES/Logo.jpeg" alt="Toy Haven Logo">
+
+                <span>Toy Haven</span>
+
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+
+            <nav class="navigation" id="navigation">
+
+                <a href="index.html">Home</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="cart.html" class="active">Cart
+                    <span class="cart-badge">0</span>
+                </a>
+
+                <a href="wishlist.html">Collection</a>
+
+                <a href="checkout.html">Checkout</a>
+
+                <a href="support.html">Support</a>
+
+            </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="page-banner">
+
+    <div class="container">
+
+        <span class="eyebrow">🛒 YOUR BASKET</span>
+
+        <h1>Your Shopping Cart</h1>
+
+        <p>Review your selected products before checkout.</p>
+
+    </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="container cart-layout">
+
+            <div class="cart-panel">
+
+                <div class="section-heading">
+
+                    <h2>Your Items</h2>
+
+                    <p id="cartItemCount">
+                    0 items
+                    </p>
+
+                </div>
+
+                <button
+                class="button button-outline"
+                id="clearCart">
+                Clear Cart
+                </button>
+
+            </div>
+
+
+            <div id="cartItems"></div>
+
+        </div>
+
+        <div>
+            <aside class="summary-panel">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+
+                    <span>Items</span>
+
+                    <strong id="itemTotal">
+                    LKR 0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>Delivery</span>
+
+                    <strong id="deliveryTotal">
+                    LKR 0.00
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="grandTotal">
+                    LKR 0.00
+                    </strong>
+
+                </div>
+
+
+                <p class="summary-note">
+
+                Free delivery for orders over
+                LKR 15,000.
+
+                </p>
+
+
+                <a href="checkout.html" class="button button-primary full-button" id="checkoutButton">Proceed to Checkout →</a>
+
+                <a href="products.html" class="button button-outline full-button">Continue Shopping</a>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="index.html" class="logo-link footer-logo">
+                    <img src="IMAGES/Logo.jpeg" alt="Toy Haven Logo">
+                    <span>Toy Haven</span>
+                </a>
+
+                <p>
+                Collectible joy for every shelf,
+                game night and gift bag.
+                </p>
+
+            </div>
+
+
+        <div>
+
+    <h3>Explore</h3>
+
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="wishlist.html">Collection</a>
+    <a href="support.html">Support</a>
+
+    </div>
+
+
+    <div>
+
+    <h3>Your Order</h3>
+
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+
+    </div>
+
+
+    <div>
+
+    <h3>Support</h3>
+
+    <a href="support.html">FAQ</a>
+    <a href="support.html">Feedback</a>
+
+    </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">© 2025 Toy Haven • Shopping cart demonstration</div>
+
+    </div>
+
+</footer>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script src="data/products.js"></script>
+<script src="app.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cartContainer =
+        document.getElementById("cartItems");
+
+    function renderCart() {
+
+        const cart = ToyHaven.getCart();
+
+        let subtotal = 0;
+        let quantity = 0;
+
+
+        cart.forEach(function (item) {
+
+            const product =
+                ToyHaven.getProduct(item.id);
+
+            if (product) {
+
+                subtotal +=
+                    product.price * item.quantity;
+
+                quantity += item.quantity;
+
+            }
+
+        });
+
+
+        const delivery =
+            subtotal === 0
+                ? 0
+                : subtotal >= 15000
+                    ? 0
+                    : 500;
+
+
+        document.getElementById("cartItemCount")
+            .textContent =
+            quantity + " item(s)";
+
+
+        document.getElementById("itemTotal")
+            .textContent =
+            ToyHaven.formatMoney(subtotal);
+
+
+        document.getElementById("deliveryTotal")
+            .textContent =
+            ToyHaven.formatMoney(delivery);
+
+
+        document.getElementById("grandTotal")
+            .textContent =
+            ToyHaven.formatMoney(
+                subtotal + delivery
+            );
+
+
+        if (cart.length === 0) {
+
+            cartContainer.innerHTML = `
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">🧸</div>
+
+                    <h3>Your cart is empty</h3>
+
+                    <p>
+                        Let's add some fun!
+                    </p>
+
+                    <a href="products.html"
+                        class="button button-primary">
+                        Browse Products
+                    </a>
+
+                </div>
+
+            `;
+
+            document.getElementById("checkoutButton")
+                .classList.add("disabled");
+
+            return;
+        }
+
+
+        document.getElementById("checkoutButton")
+            .classList.remove("disabled");
+
+
+        cartContainer.innerHTML =
+            cart.map(function (item) {
+
+                const product =
+                    ToyHaven.getProduct(item.id);
+
+                if (!product) return "";
+
+                return `
+
+                <article class="cart-item">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}">
+
+                    <div class="cart-product">
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <p>
+                            ${product.category}
+                        </p>
+
+                        <strong>
+                            ${ToyHaven.formatMoney(product.price)}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="quantity-control">
+
+                        <button
+                            data-id="${product.id}"
+                            data-action="decrease">
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            data-id="${product.id}"
+                            data-action="increase">
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <strong class="cart-subtotal">
+
+                        ${ToyHaven.formatMoney(
+                            product.price *
+                            item.quantity
+                        )}
+
+                    </strong>
+
+                </article>
+
+                `;
+
+            }).join("");
+
+
+        cartContainer
+            .querySelectorAll(".quantity-control button")
+            .forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    ToyHaven.changeQuantity(
+                        button.dataset.id,
+                        button.dataset.action
+                    );
+
+                    renderCart();
+
+                });
+
+            });
+
+    }
+
+
+    document.getElementById("clearCart")
+        .addEventListener("click", function () {
+
+            localStorage.removeItem(
+                ToyHaven.KEYS.cart
+            );
+
+            renderCart();
+
+            ToyHaven.showToast(
+                "Cart cleared successfully"
+            );
+
+        });
+
+
+    renderCart();
+
+});
+
+</script>
+
+</body>
+</html>
